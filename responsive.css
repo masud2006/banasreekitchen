@@ -1,0 +1,272 @@
+/* ===========================
+   RESPONSIVE.CSS
+   Breakpoints:
+   - xs: < 480px
+   - sm: 480px – 767px
+   - md: 768px – 1023px
+   - lg: 1024px – 1279px
+   - xl: ≥ 1280px
+=========================== */
+
+/* ===========================
+   XS – Extra Small (<480px)
+=========================== */
+@media (max-width: 479px) {
+
+  :root { --nav-h: 60px; }
+
+  /* Floating */
+  .floating-buttons { bottom: 16px; left: 12px; gap: 10px; }
+  .fab { padding: 11px 15px 11px 12px; font-size: 12px; }
+  .fab svg { width: 22px; height: 22px; }
+
+  /* Navbar */
+  .brand-name { font-size: 15px; }
+  .brand-tagline { display: none; }
+  .cart-btn { width: 40px; height: 40px; }
+
+  /* Hero */
+  .hero { min-height: 100svh; }
+  .hero-content { padding: 100px 14px 60px; }
+  .hero-badge { font-size: 11px; padding: 5px 12px; }
+  .hero-title { font-size: 32px; }
+  .hero-sub { font-size: 14px; }
+  .hero-actions { gap: 10px; }
+  .btn-primary, .btn-secondary { font-size: 14px; padding: 12px 20px; }
+  .hero-stats { gap: 16px; }
+  .stat-num { font-size: 20px; }
+  .stat-label { font-size: 11px; }
+
+  /* Search */
+  .search-section { padding: 32px 0 16px; }
+  .section-title { font-size: 24px; }
+  .search-filter-bar { flex-direction: column; gap: 10px; }
+  .filter-select { width: 100%; min-width: unset; }
+  .filter-pills { gap: 6px; }
+  .pill { padding: 6px 14px; font-size: 12px; }
+
+  /* Food Grid - at least 3 items per row */
+  .food-section { padding: 20px 0 48px; }
+  .food-grid { 
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+  }
+  .food-img-wrap { height: 130px; }
+  .food-name { font-size: 13px; }
+  .food-price { font-size: 16px; }
+  .add-to-cart-btn { font-size: 11px; padding: 6px 10px; }
+  .food-desc { font-size: 11px; }
+
+  /* Cart */
+  .cart-sidebar { width: 100vw; }
+  .cart-header { padding: 16px 14px 12px; }
+  .cart-body { padding: 12px; }
+  .cart-footer { padding: 12px 14px; }
+
+  /* Modal */
+  .modal { border-radius: 20px 20px 0 0; max-height: 95dvh; }
+  .modal-header { padding: 16px 14px 12px; }
+  .modal-body { padding: 14px; }
+  .modal-footer { padding: 12px 14px; }
+  .btn-confirm { font-size: 15px; padding: 14px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea { font-size: 16px; }
+}
+
+/* ===========================
+   SM – Small (480px – 767px)
+=========================== */
+@media (min-width: 480px) and (max-width: 767px) {
+
+  :root { --nav-h: 64px; }
+
+  /* Floating */
+  .floating-buttons { bottom: 20px; left: 14px; }
+
+  /* Hero */
+  .hero { min-height: 90svh; }
+  .hero-content { padding: 110px 16px 70px; }
+  .hero-title { font-size: 38px; }
+  .hero-stats { gap: 20px; }
+
+  /* Search */
+  .search-section { padding: 40px 0 18px; }
+  .search-filter-bar { flex-direction: column; gap: 10px; }
+  .filter-select { width: 100%; min-width: unset; }
+
+  /* Food Grid - at least 3 items per row */
+  .food-grid { 
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 14px;
+  }
+  .food-img-wrap { height: 140px; }
+  .food-name { font-size: 14px; }
+  .add-to-cart-btn { font-size: 12px; padding: 8px 12px; }
+  .food-price { font-size: 17px; }
+
+  /* Cart */
+  .cart-sidebar { width: 100vw; }
+
+  /* Modal */
+  .modal { border-radius: 22px 22px 0 0; }
+}
+
+/* ===========================
+   MD – Medium (768px – 1023px)
+=========================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* Hero */
+  .hero-content { padding: 120px 20px 80px; max-width: 680px; }
+  .hero-title { font-size: 52px; }
+
+  /* Search */
+  .search-filter-bar { gap: 14px; }
+
+  /* Food Grid - 4 items per row */
+  .food-grid { 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .food-img-wrap { height: 160px; }
+
+  /* Cart */
+  .cart-sidebar { width: 380px; }
+
+  /* Modal */
+  .modal-overlay { align-items: center; padding: 20px; }
+  .modal { border-radius: var(--radius-xl); max-height: 88vh; }
+}
+
+/* ===========================
+   LG – Large (1024px – 1279px)
+=========================== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  /* Food Grid - 5 items per row */
+  .food-grid { 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  /* Modal */
+  .modal-overlay { align-items: center; padding: 24px; }
+  .modal { border-radius: var(--radius-xl); max-height: 86vh; }
+
+  /* Cart */
+  .cart-sidebar { width: 400px; }
+}
+
+/* ===========================
+   XL – Extra Large (≥1280px)
+=========================== */
+@media (min-width: 1280px) {
+
+  /* Food Grid - 5 items per row (or 6 for larger screens) */
+  .food-grid { 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+  }
+
+  /* Hero */
+  .hero-content { padding: 140px 0 100px; }
+  .hero-title { font-size: 72px; }
+
+  /* Modal */
+  .modal-overlay { align-items: center; padding: 24px; }
+  .modal { border-radius: var(--radius-xl); max-height: 85vh; }
+
+  /* Cart */
+  .cart-sidebar { width: 420px; }
+}
+
+/* ===========================
+   UTILITIES FOR ALL MOBILE
+=========================== */
+@media (max-width: 767px) {
+
+  /* Ensure no horizontal scroll */
+  .hero-title br { display: none; }
+  .hero-title { word-break: break-word; }
+
+  /* Cart count positioning */
+  .cart-count { top: -6px; right: -6px; }
+
+  /* Make filter scroll horizontally on small screens */
+  .filter-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .filter-pills::-webkit-scrollbar { display: none; }
+  .pill { flex-shrink: 0; }
+
+  /* Make floating buttons slightly smaller on mobile */
+  .fab { font-size: 11px; }
+
+  /* Fix form inputs to prevent zoom on iOS */
+  .search-input,
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px !important;
+  }
+
+  /* Stack hero actions vertically on very small */
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; justify-content: center; }
+}
+
+@media (max-width: 479px) {
+  .hero-stats { flex-direction: row; gap: 12px; }
+  .stat-divider { display: none; }
+  .stat { align-items: center; }
+}
+
+/* ===========================
+   DESKTOP HOVER ENHANCEMENTS
+=========================== */
+@media (hover: hover) and (pointer: fine) {
+  .food-card:hover .food-category-badge {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .cart-item:hover {
+    border-color: rgba(255,87,34,0.2);
+    background: #FFF9F7;
+  }
+}
+
+/* ===========================
+   PRINT
+=========================== */
+@media print {
+  .floating-buttons,
+  .navbar,
+  .cart-sidebar,
+  .modal-overlay,
+  .hero-actions { display: none !important; }
+}
+
+/* ===========================
+   SAFE AREA INSETS (iPhone)
+=========================== */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .cart-footer { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+  .modal-footer { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+  .floating-buttons { bottom: max(24px, calc(env(safe-area-inset-bottom) + 12px)); }
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
