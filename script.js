@@ -1,38 +1,38 @@
 'use strict';
 
 const FOODS = [
-  { id:  1, name: 'Chicken Samosa',       category: 'snacks',     price: 25,  desc: 'Crispy golden pastry filled with spiced chicken',      img: 'https://picsum.photos/seed/samosa1/400/300'       },
-  { id:  2, name: 'Beef Singara',          category: 'snacks',     price: 20,  desc: 'Triangular fried pastry with spiced beef filling',     img: 'https://picsum.photos/seed/singara2/400/300'      },
-  { id:  3, name: 'Egg Roll',              category: 'snacks',     price: 40,  desc: 'Flaky paratha wrapped with fried egg and veggies',     img: 'https://picsum.photos/seed/eggroll3/400/300'      },
-  { id:  4, name: 'Chicken Roll',          category: 'snacks',     price: 65,  desc: 'Tender spiced chicken wrapped in soft paratha',        img: 'https://picsum.photos/seed/chickenroll4/400/300'  },
-  { id:  5, name: 'Puri',                  category: 'snacks',     price: 12,  desc: 'Light and fluffy deep-fried bread, served piping hot', img: 'https://picsum.photos/seed/puri5/400/300'         },
-  { id:  6, name: 'Vegetable Bhaji',       category: 'snacks',     price: 30,  desc: 'Crispy mixed vegetable fritters with aromatic spices', img: 'https://picsum.photos/seed/bhaji6/400/300'        },
-  { id:  7, name: 'Fuchka',                category: 'snacks',     price: 35,  desc: 'Crispy hollow puris with tangy tamarind water',        img: 'https://picsum.photos/seed/fuchka7/400/300'       },
-  { id:  8, name: 'Chotpoti',              category: 'snacks',     price: 45,  desc: 'Tangy chickpea snack with boiled eggs and tamarind',   img: 'https://picsum.photos/seed/chotpoti8/400/300'     },
-  { id:  9, name: 'Fried Chicken',         category: 'snacks',     price: 90,  desc: 'Crispy marinated fried chicken, perfectly seasoned',   img: 'https://picsum.photos/seed/friedchk9/400/300'     },
-  { id: 10, name: 'Chicken Nuggets',       category: 'snacks',     price: 75,  desc: 'Juicy bite-sized chicken with smoky dipping sauce',    img: 'https://picsum.photos/seed/nuggets10/400/300'     },
-  { id: 11, name: 'French Fries',          category: 'snacks',     price: 55,  desc: 'Golden crispy fries seasoned with signature spices',   img: 'https://picsum.photos/seed/fries11/400/300'       },
-  { id: 12, name: 'Loaded Cheese Fries',   category: 'snacks',     price: 75,  desc: 'Crispy fries smothered in rich melted cheese sauce',   img: 'https://picsum.photos/seed/cheesefries12/400/300' },
-  { id: 13, name: 'Mango Juice',           category: 'juice',      price: 40,  desc: 'Fresh ripe mango blended smooth and ice-cold',         img: 'https://picsum.photos/seed/mango13/400/300'       },
-  { id: 14, name: 'Orange Juice',          category: 'juice',      price: 38,  desc: 'Freshly squeezed pure orange juice, sweet and zesty',  img: 'https://picsum.photos/seed/orange14/400/300'      },
-  { id: 15, name: 'Watermelon Juice',      category: 'juice',      price: 35,  desc: 'Refreshing chilled watermelon juice, naturally sweet', img: 'https://picsum.photos/seed/watermelon15/400/300'  },
-  { id: 16, name: 'Fresh Lemon Juice',     category: 'juice',      price: 30,  desc: 'Cool lemon juice with fresh mint and a pinch of salt', img: 'https://picsum.photos/seed/lemon16/400/300'       },
-  { id: 17, name: 'Guava Juice',           category: 'juice',      price: 38,  desc: 'Sweet and tangy fresh guava juice, served chilled',    img: 'https://picsum.photos/seed/guava17/400/300'       },
-  { id: 18, name: 'Mixed Fruit Juice',     category: 'juice',      price: 55,  desc: 'Seasonal fresh fruit blend, full of natural vitamins', img: 'https://picsum.photos/seed/mixedfruit18/400/300'  },
-  { id: 19, name: 'Pineapple Juice',       category: 'juice',      price: 42,  desc: 'Sweet-tangy fresh pineapple juice, a tropical treat',  img: 'https://picsum.photos/seed/pineapple19/400/300'   },
-  { id: 20, name: 'Coconut Water',         category: 'juice',      price: 50,  desc: 'Pure natural coconut water, hydrating and fresh',      img: 'https://picsum.photos/seed/coconut20/400/300'     },
-  { id: 21, name: 'Strawberry Juice',      category: 'juice',      price: 48,  desc: 'Bright, fresh-pressed strawberry juice, ice-cold',     img: 'https://picsum.photos/seed/strawberry21/400/300'  },
-  { id: 22, name: 'Apple Juice',           category: 'juice',      price: 42,  desc: 'Cold-pressed fresh apple juice, naturally sweet',      img: 'https://picsum.photos/seed/apple22/400/300'       },
-  { id: 23, name: 'Chocolate Milkshake',   category: 'milkshakes', price: 65,  desc: 'Rich creamy chocolate shake blended with ice cream',   img: 'https://picsum.photos/seed/chocshake23/400/300'   },
-  { id: 24, name: 'Vanilla Milkshake',     category: 'milkshakes', price: 60,  desc: 'Classic smooth vanilla shake, sweet and velvety',      img: 'https://picsum.photos/seed/vanilla24/400/300'     },
-  { id: 25, name: 'Strawberry Milkshake',  category: 'milkshakes', price: 70,  desc: 'Thick creamy strawberry shake topped with cream',      img: 'https://picsum.photos/seed/strawshake25/400/300'  },
-  { id: 26, name: 'Mango Milkshake',       category: 'milkshakes', price: 65,  desc: 'Tropical mango shake blended with fresh cold milk',    img: 'https://picsum.photos/seed/mangoshake26/400/300'  },
-  { id: 27, name: 'Oreo Milkshake',        category: 'milkshakes', price: 80,  desc: 'Crushed Oreo cookies blended into a dreamy shake',     img: 'https://picsum.photos/seed/oreoshake27/400/300'   },
-  { id: 28, name: 'Banana Milkshake',      category: 'milkshakes', price: 60,  desc: 'Creamy banana shake with a warm hint of honey',        img: 'https://picsum.photos/seed/bananashake28/400/300' },
-  { id: 29, name: 'KitKat Milkshake',      category: 'milkshakes', price: 85,  desc: 'Indulgent KitKat chocolate shake with whipped cream',  img: 'https://picsum.photos/seed/kitkat29/400/300'      },
-  { id: 30, name: 'Nutella Milkshake',     category: 'milkshakes', price: 90,  desc: 'Velvety Nutella blended shake — pure indulgence',      img: 'https://picsum.photos/seed/nutella30/400/300'     },
-  { id: 31, name: 'Cold Coffee Shake',     category: 'milkshakes', price: 70,  desc: 'Chilled coffee blended with ice cream and cold milk',  img: 'https://picsum.photos/seed/coffeeshake31/400/300' },
-  { id: 32, name: 'Caramel Milkshake',     category: 'milkshakes', price: 75,  desc: 'Smooth caramel drizzled shake with a salted finish',   img: 'https://picsum.photos/seed/caramel32/400/300'     },
+  { id:  1, name: 'Chicken Samosa',       category: 'snacks',     price: 25,  img: 'https://picsum.photos/seed/samosa1/400/300'       },
+  { id:  2, name: 'Beef Singara',          category: 'snacks',     price: 20,  img: 'https://picsum.photos/seed/singara2/400/300'      },
+  { id:  3, name: 'Egg Roll',              category: 'snacks',     price: 40,  img: 'https://picsum.photos/seed/eggroll3/400/300'      },
+  { id:  4, name: 'Chicken Roll',          category: 'snacks',     price: 65,  img: 'https://picsum.photos/seed/chickenroll4/400/300'  },
+  { id:  5, name: 'Puri',                  category: 'snacks',     price: 12,  img: 'https://picsum.photos/seed/puri5/400/300'         },
+  { id:  6, name: 'Vegetable Bhaji',       category: 'snacks',     price: 30,  img: 'https://picsum.photos/seed/bhaji6/400/300'        },
+  { id:  7, name: 'Fuchka',                category: 'snacks',     price: 35,  img: 'https://picsum.photos/seed/fuchka7/400/300'       },
+  { id:  8, name: 'Chotpoti',              category: 'snacks',     price: 45,  img: 'https://picsum.photos/seed/chotpoti8/400/300'     },
+  { id:  9, name: 'Fried Chicken',         category: 'snacks',     price: 90,  img: 'https://picsum.photos/seed/friedchk9/400/300'     },
+  { id: 10, name: 'Chicken Nuggets',       category: 'snacks',     price: 75,  img: 'https://picsum.photos/seed/nuggets10/400/300'     },
+  { id: 11, name: 'French Fries',          category: 'snacks',     price: 55,  img: 'https://picsum.photos/seed/fries11/400/300'       },
+  { id: 12, name: 'Loaded Cheese Fries',   category: 'snacks',     price: 75,  img: 'https://picsum.photos/seed/cheesefries12/400/300' },
+  { id: 13, name: 'Mango Juice',           category: 'juice',      price: 40,  img: 'https://picsum.photos/seed/mango13/400/300'       },
+  { id: 14, name: 'Orange Juice',          category: 'juice',      price: 38,  img: 'https://picsum.photos/seed/orange14/400/300'      },
+  { id: 15, name: 'Watermelon Juice',      category: 'juice',      price: 35,  img: 'https://picsum.photos/seed/watermelon15/400/300'  },
+  { id: 16, name: 'Fresh Lemon Juice',     category: 'juice',      price: 30,  img: 'https://picsum.photos/seed/lemon16/400/300'       },
+  { id: 17, name: 'Guava Juice',           category: 'juice',      price: 38,  img: 'https://picsum.photos/seed/guava17/400/300'       },
+  { id: 18, name: 'Mixed Fruit Juice',     category: 'juice',      price: 55,  img: 'https://picsum.photos/seed/mixedfruit18/400/300'  },
+  { id: 19, name: 'Pineapple Juice',       category: 'juice',      price: 42,  img: 'https://picsum.photos/seed/pineapple19/400/300'   },
+  { id: 20, name: 'Coconut Water',         category: 'juice',      price: 50,  img: 'https://picsum.photos/seed/coconut20/400/300'     },
+  { id: 21, name: 'Strawberry Juice',      category: 'juice',      price: 48,  img: 'https://picsum.photos/seed/strawberry21/400/300'  },
+  { id: 22, name: 'Apple Juice',           category: 'juice',      price: 42,  img: 'https://picsum.photos/seed/apple22/400/300'       },
+  { id: 23, name: 'Chocolate Milkshake',   category: 'milkshakes', price: 65,  img: 'https://picsum.photos/seed/chocshake23/400/300'   },
+  { id: 24, name: 'Vanilla Milkshake',     category: 'milkshakes', price: 60,  img: 'https://picsum.photos/seed/vanilla24/400/300'     },
+  { id: 25, name: 'Strawberry Milkshake',  category: 'milkshakes', price: 70,  img: 'https://picsum.photos/seed/strawshake25/400/300'  },
+  { id: 26, name: 'Mango Milkshake',       category: 'milkshakes', price: 65,  img: 'https://picsum.photos/seed/mangoshake26/400/300'  },
+  { id: 27, name: 'Oreo Milkshake',        category: 'milkshakes', price: 80,  img: 'https://picsum.photos/seed/oreoshake27/400/300'   },
+  { id: 28, name: 'Banana Milkshake',      category: 'milkshakes', price: 60,  img: 'https://picsum.photos/seed/bananashake28/400/300' },
+  { id: 29, name: 'KitKat Milkshake',      category: 'milkshakes', price: 85,  img: 'https://picsum.photos/seed/kitkat29/400/300'      },
+  { id: 30, name: 'Nutella Milkshake',     category: 'milkshakes', price: 90,  img: 'https://picsum.photos/seed/nutella30/400/300'     },
+  { id: 31, name: 'Cold Coffee Shake',     category: 'milkshakes', price: 70,  img: 'https://picsum.photos/seed/coffeeshake31/400/300' },
+  { id: 32, name: 'Caramel Milkshake',     category: 'milkshakes', price: 75,  img: 'https://picsum.photos/seed/caramel32/400/300'     },
 ];
 
 const WA_NUMBER = '8801758742415';
@@ -84,12 +84,12 @@ function saveCart() {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
-/* ======= RENDER FOODS ======= */
+/* ======= RENDER FOODS (no description) ======= */
 function renderFoods() {
   const q = El.searchInput.value.trim().toLowerCase();
   const filtered = FOODS.filter(f => {
     const catOk    = activeCat === 'all' || f.category === activeCat;
-    const searchOk = !q || f.name.toLowerCase().includes(q) || f.desc.toLowerCase().includes(q) || f.category.includes(q);
+    const searchOk = !q || f.name.toLowerCase().includes(q);
     return catOk && searchOk;
   });
 
@@ -110,7 +110,6 @@ function renderFoods() {
       </div>
       <div class="food-card-body">
         <h3 class="food-name">${f.name}</h3>
-        <p class="food-desc">${f.desc}</p>
         <div class="food-card-footer">
           <div class="food-price"><span>৳</span>${f.price}</div>
           <button class="add-to-cart-btn${inCart ? ' added' : ''}" data-food-id="${f.id}" aria-label="Add ${f.name} to cart">
