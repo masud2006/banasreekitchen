@@ -15,8 +15,13 @@
 
   :root { --nav-h: 60px; }
 
-  /* Floating */
-  .floating-buttons { bottom: 16px; left: 12px; gap: 10px; }
+  /* Floating buttons - stay on right side */
+  .floating-buttons {
+    bottom: 16px;
+    right: 12px;
+    left: auto;
+    gap: 10px;
+  }
   .fab { padding: 11px 15px 11px 12px; font-size: 12px; }
   .fab svg { width: 22px; height: 22px; }
 
@@ -51,11 +56,12 @@
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 12px;
   }
-  .food-img-wrap { height: 130px; }
-  .food-name { font-size: 13px; }
-  .food-price { font-size: 16px; }
-  .add-to-cart-btn { font-size: 11px; padding: 6px 10px; }
-  .food-desc { font-size: 11px; }
+  .food-img-wrap { height: 110px; }
+  .food-name { font-size: 12px; margin-bottom: 4px; }
+  .food-price { font-size: 14px; }
+  .food-card-footer { margin-top: 4px; }
+  .add-to-cart-btn { font-size: 10px; padding: 6px 8px; }
+  .add-to-cart-btn svg { width: 12px; height: 12px; }
 
   /* Cart */
   .cart-sidebar { width: 100vw; }
@@ -81,8 +87,12 @@
 
   :root { --nav-h: 64px; }
 
-  /* Floating */
-  .floating-buttons { bottom: 20px; left: 14px; }
+  /* Floating buttons - right side */
+  .floating-buttons {
+    bottom: 20px;
+    right: 14px;
+    left: auto;
+  }
 
   /* Hero */
   .hero { min-height: 90svh; }
@@ -100,10 +110,10 @@
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 14px;
   }
-  .food-img-wrap { height: 140px; }
-  .food-name { font-size: 14px; }
-  .add-to-cart-btn { font-size: 12px; padding: 8px 12px; }
-  .food-price { font-size: 17px; }
+  .food-img-wrap { height: 130px; }
+  .food-name { font-size: 13px; }
+  .food-price { font-size: 16px; }
+  .add-to-cart-btn { font-size: 11px; padding: 7px 10px; }
 
   /* Cart */
   .cart-sidebar { width: 100vw; }
@@ -129,7 +139,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
-  .food-img-wrap { height: 160px; }
+  .food-img-wrap { height: 150px; }
 
   /* Cart */
   .cart-sidebar { width: 380px; }
@@ -147,8 +157,9 @@
   /* Food Grid - 5 items per row */
   .food-grid { 
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 18px;
   }
+  .food-img-wrap { height: 160px; }
 
   /* Modal */
   .modal-overlay { align-items: center; padding: 24px; }
@@ -163,11 +174,12 @@
 =========================== */
 @media (min-width: 1280px) {
 
-  /* Food Grid - 5 items per row (or 6 for larger screens) */
+  /* Food Grid - 5 items per row */
   .food-grid { 
     grid-template-columns: repeat(5, 1fr);
     gap: 22px;
   }
+  .food-img-wrap { height: 180px; }
 
   /* Hero */
   .hero-content { padding: 140px 0 100px; }
